@@ -2,7 +2,7 @@ FROM nginx
 
 MAINTAINER Fabian Fuelling <docker@fabfuel.de>
 
-COPY config/ /etc/nginx
-COPY www/ /var/www
+COPY etc/nginx /etc/nginx
+COPY var/www /var/www
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
